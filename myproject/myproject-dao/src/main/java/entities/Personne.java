@@ -1,6 +1,9 @@
 package entities;
 
-public class Personne {
+import javax.persistence.Entity;
+
+  @Entity
+  public class Personne implements java.io.Serializable{
 	Integer id;
 	String name;
 	String age;
