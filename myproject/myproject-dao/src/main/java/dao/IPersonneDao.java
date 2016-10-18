@@ -3,6 +3,6 @@ package dao;
 import entities.Personne;
 
 public interface IPersonneDao {
-	void addPersonneDao();
+	void addPersonneDao(Personne personne);
 	Personne getPersonneByIdDao(Integer id);
 }

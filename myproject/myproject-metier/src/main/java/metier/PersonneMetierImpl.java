@@ -1,16 +1,18 @@
 package metier;
 
+import dao.IPersonneDao;
 import entities.Personne;
 
 
 public class PersonneMetierImpl implements IPersonneMetier {
+	
+	public IPersonneDao personneDao;
 
 	public PersonneMetierImpl() {
-		// TODO Auto-generated constructor stub
-	}
+ 	}
 
 	public Void addPersonne(Personne personne) {
-		// TODO Auto-generated method stub
+		personneDao.addPersonneDao(personne);
 		return null;
 	}
 
