@@ -25,4 +25,14 @@ public class PersonneMetierImpl implements IPersonneMetier {
 		return null;
 	}
 
+	public IPersonneDao getPersonneDao() {
+		return personneDao;
+	}
+
+	public void setPersonneDao(IPersonneDao personneDao) {
+		this.personneDao = personneDao;
+	}
+	
+	
+
 }

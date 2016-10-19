@@ -9,7 +9,7 @@ public class PersonneDaoImpl implements IPersonneDao {
 	}
 
 	public void addPersonneDao(Personne personne) {
-		// TODO Auto-generated method stub
+		System.out.println("from add personne dao");
 		
 	}
 
