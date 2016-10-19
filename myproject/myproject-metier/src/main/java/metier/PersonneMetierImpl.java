@@ -1,6 +1,8 @@
 package metier;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
 import dao.IPersonneDao;
@@ -13,6 +15,8 @@ public class PersonneMetierImpl implements IPersonneMetier {
 	public IPersonneDao personneDao;
 
 	public PersonneMetierImpl() {
+	 ApplicationContext appContext =  new ClassPathXmlApplicationContext("spring-dao.xml");
+
  	}
 
 	public Void addPersonne(Personne personne) {

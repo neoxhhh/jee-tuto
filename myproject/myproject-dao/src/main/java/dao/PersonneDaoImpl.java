@@ -1,8 +1,14 @@
 package dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import entities.Personne;
 
 public class PersonneDaoImpl implements IPersonneDao {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
 	
 	public PersonneDaoImpl() {
 		// TODO Auto-generated constructor stub
