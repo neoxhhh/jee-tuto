@@ -1,25 +1,28 @@
 package metier;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
 import dao.IPersonneDao;
+import dao.PersonneDaoImpl;
 import entities.Personne;
 
-@Service("PersonneMetier")
-public class PersonneMetierImpl implements IPersonneMetier {
+  public class PersonneMetierImpl implements IPersonneMetier {
 	
-	@Autowired
+	 
 	public IPersonneDao personneDao;
 
 	public PersonneMetierImpl() {
-	 ApplicationContext appContext =  new ClassPathXmlApplicationContext("spring-dao.xml");
-
+ 
  	}
 
 	public Void addPersonne(Personne personne) {
+		if(personneDao == null) System.out.println("from metier personne Dao NULL");
+		
 		personneDao.addPersonneDao(personne);
 		return null;
 	}
